@@ -1,0 +1,49 @@
+This is a hacked-together version of the nlme package which alters
+the gls() and lme() functions to use great circle distance matrices
+when assessing spatial autocorrelation. It was created following
+instructions at:
+https://stat.ethz.ch/pipermail/r-help/2012-October/325174.html
+
+To use it, you need to remove.packages("nlme") and then:
+
+install.packages(pkgs="path/to/nlmehaversine",
+  repos=NULL, type="source")
+
+The package should then compile and install. At that point, you can
+run a gls() model with great circle spatial autocorrelation with a
+call such as:
+
+gls(ft, correlation=corSpher(form= ~ lon + lat,
+  metric="rdist.earth"), data=hotsample)
+
+It's advisable to uninstall this version of the package and
+reinstall the base version when you don't specifically need it.
+
+The original readme is included below.
+
+-------------------
+
+Copyright (C) 1999-2001 Jose C. Pinheiro and Douglas M. Bates
+	
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option)
+any later version.
+ 
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details. 
+  
+You should have received a copy of the GNU General Public License
+along with this file.  A copy of the GNU General Public License is
+available at http://www.r-project.org/Licenses/
+
+-------------------
+
+This package contains the nlme (nonlinear mixed effects) package
+version 3.1 for R.
+
+Authors: Jose Pinheiro
+         Douglas Bates <bates@stat.wisc.edu>
+         Saikat DebRoy

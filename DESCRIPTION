@@ -1,0 +1,32 @@
+Package: nlme
+Version: 1.0.0
+Date: 2013-07-08
+Title: Edited version of NLME using Great Circle distances
+Authors@R: c(person("Toph", "Allen", role = "aut"),
+             person("José", "Pinheiro", role = "aut",
+                    comment = "S version"),
+             person("Douglas", "Bates", role = "aut",
+                    comment = "up to 2007"),
+             person("Saikat", "DebRoy", role = "ctb",
+                    comment = "up to 2002"),
+             person("Deepayan", "Sarkar", role = "ctb",
+                    comment = "up to 2005"),
+	     person("R-core", email = "R-core@R-project.org",
+                    role = c("aut", "cre")),
+             person("EISPACK authors", role = "ctb"))
+Author: José Pinheiro [aut] (S version),
+  Douglas Bates [aut] (up to 2007),
+  Saikat DebRoy [ctb] (up to 2002),
+  Deepayan Sarkar [ctb] (up to 2005),
+  EISPACK authors [ctb],
+  R-core [aut, cre]
+Description: Fit and compare Gaussian linear and nonlinear mixed-effects models.
+Depends: graphics, stats, R (>= 3.0.0), fields
+Imports: lattice
+Suggests: Hmisc, MASS
+LazyData: yes
+ByteCompile: yes
+Encoding: UTF-8
+License: GPL (>= 2)
+NeedsCompilation: yes
+Date/Publication: 2013-07-08
